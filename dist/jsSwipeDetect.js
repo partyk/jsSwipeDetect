@@ -12,7 +12,6 @@ var JsSwipeDetect = function () {
     function JsSwipeDetect(options) {
         _classCallCheck(this, JsSwipeDetect);
 
-        console.log('creat construct');
         this._options = _extends({}, {
             element: '',
 
@@ -67,8 +66,6 @@ var JsSwipeDetect = function () {
     }, {
         key: 'eventTouchStart',
         value: function eventTouchStart(e) {
-            console.log('start');
-
             var touchObj = e.changedTouches[0];
 
             this._swipeType = 'none';
@@ -77,9 +74,6 @@ var JsSwipeDetect = function () {
             this._start.y = touchObj.pageY;
 
             this._time.start = new Date().getTime();
-
-            console.log('start coordinates x:' + this._start.x + ', y:' + this._start.y);
-
             this._options.handleTouch.call(this, e, 'none', 'start', this._swipeType, 0);
 
             e.preventDefault();
@@ -87,24 +81,16 @@ var JsSwipeDetect = function () {
     }, {
         key: 'eventTouchMove',
         value: function eventTouchMove(e) {
-            console.log('move');
-
             var touchObj = e.changedTouches[0];
 
             this._end.x = touchObj.pageX - this._start.x;
             this._end.y = touchObj.pageY - this._start.y;
-
-            console.log('move coordinates x:' + this._end.x + ', y:' + this._end.y);
-            console.log('direction:' + this.getDirection());
-            console.log('distance:' + this._end[this.getAxis()]);
 
             this._options.handleTouch.call(this, e, this.getDirection(), 'move', this._swipeType, this._end[this.getAxis()]);
         }
     }, {
         key: 'eventTouchEnd',
         value: function eventTouchEnd(e) {
-            console.log('end');
-
             var touchObj = e.changedTouches[0];
 
             this._time.end = new Date().getTime();
@@ -113,11 +99,6 @@ var JsSwipeDetect = function () {
             if (this._time.elapsed === false || this._time.elapsed <= this._options.allowedTime && (Math.abs(this._end.x) >= this._options.threshold && Math.abs(this._end.y) <= this._options.restraint || Math.abs(this._end.y) >= this._options.threshold && Math.abs(this._end.x) <= this._options.restraint)) {
                 this._swipeType = this.getDirection();
             }
-
-            console.log('end coordinates x:' + this._end.x + ', y:' + this._end.y);
-            console.log('direction:' + this.getDirection());
-            console.log('swipe:' + this._swipeType);
-            console.log('distance:' + this._end[this.getAxis()]);
 
             this._options.handleTouch.call(this, e, this.getDirection(), 'end', this._swipeType, this._end[this.getAxis()]);
             e.preventDefault();

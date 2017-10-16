@@ -9,14 +9,14 @@ module.exports = {
   // grunt defaultni spusteni
   default: [
     'clean',  //vycistim slozku
-    'babel', //spustim devel
+    'babel:devel', //spustim devel
     'watch', //spustim watch
   ],
 
   //produke
   build: [
     'clean', //vycistim slozku
-    'babel', //spustim build
+    'babel:build', //spustim build
     'uglify', //minifikace js
   ]
 
