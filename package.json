@@ -3,10 +3,7 @@
   "version": "1.0.1",
   "description": "Detection of swipe direction",
   "homepage": "https://github.com/partyk/jsSwipeDetect#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/partyk/jsSwipeDetect.git"
-  },
+  "repository": "partyk/jsSwipeDetect",
   "main": "Gruntfile.js",
   "author": "Bohdan Partyk (https://github.com/partyk/jsSwipeDetect)",
   "license": "MIT",
