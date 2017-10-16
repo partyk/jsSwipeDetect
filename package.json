@@ -1,13 +1,15 @@
 {
   "name": "js-swipe-detect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detection of swipe direction",
-  "repository": "https://github.com/partyk/jsSwipeDetect.git",
+  "homepage": "https://github.com/partyk/jsSwipeDetect#readme",
+  "repository": "partyk/jsSwipeDetect",
   "main": "Gruntfile.js",
-  "author": "Bohdan Partyk",
+  "author": "Bohdan Partyk (https://github.com/partyk/jsSwipeDetect)",
   "license": "MIT",
   "keywords": [
-    "javascript", "swipe"
+    "javascript",
+    "swipe"
   ],
   "devDependencies": {
     "babel-plugin-transform-object-assign": "^6.22.0",
@@ -20,5 +22,9 @@
     "grunt-contrib-watch": "^1.0.0",
     "load-grunt-config": "^0.19.2",
     "time-grunt": "^1.4.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/partyk/jsSwipeDetect/issues"
+  },
+  "dependencies": {}
 }
