@@ -6,7 +6,11 @@ JavaScript for detection of swipe direction.
 
 ## Instalation
 
-Download or clone repository
+Download or clone repository.
+
+## NPM
+
+npm install js-swipe-detect
 
 ## Devel
 ```npm install``` – for development.
