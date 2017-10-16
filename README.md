@@ -1,6 +1,6 @@
-# Grunt DevStack
+# jsSwipeDetection
 
-jsSwipeDetection.
+JavaScript for detection of swipe direction.
 
 ---
 
